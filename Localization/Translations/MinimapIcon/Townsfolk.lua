@@ -63,7 +63,7 @@ local townsfolkLocales = {
         ["frFR"] = "Maître de guerre",
     },
     ["Class Trainer"] = {
-        ["ptBR"] = "Instrutor de classe",
+        ["ptBR"] = "Instrutor de Classe",
         ["ruRU"] = "Учитель классовых навыков",
         ["deDE"] = "Lehrer:in für eine Klasse",
         ["koKR"] = "직업 상급자",
@@ -135,7 +135,7 @@ local townsfolkLocales = {
         ["frFR"] = "Boîte aux lettres",
     },
     ["Profession Trainer"] = {
-        ["ptBR"] = "Instrutor de profissão",
+        ["ptBR"] = "Instrutor de Profissão",
         ["ruRU"] = "Учитель профессий",
         ["deDE"] = "Berufsausbilder",
         ["koKR"] = "기술 전문가",
