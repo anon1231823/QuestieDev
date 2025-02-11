@@ -183,6 +183,20 @@ local phases = {
     SERENDIA_INN = 1111,
     GRIMCLAW_THICKET = 1112,
     GRIMCLAW_INN = 1113,
+    BARGE_AT_PEACE = 1114,
+    BARGE_UNDER_ATTACK = 1115,
+    KELSEY_AT_COVE = 1116,
+    HORATIO_IRONCLAD_COVE = 1117,
+    DEADMINES_HOGGER_ALIVE = 1118,
+    DEADMINES_HOGGER_DEAD = 1119,
+    SILVERPINE_FOREST_HIGH_COMMAND = 1120,
+    SILVERPINE_FOREST_SEPULCHER = 1121,
+    SILVERPINE_FOREST_FORSAKEN_FRONT = 1122,
+    SILVERPINE_FOREST_FORSAKEN_FRONT_2 = 1123,
+    SILVERPINE_FOREST_BATTLEFRONT = 1124,
+    RUINS_OF_GILNEAS_FFC = 1125,
+    RUINS_OF_GILNEAS_EMBERSTONE = 1126,
+    RUINS_OF_GILNEAS_TEMPESTS_REACH = 1127,
 }
 Phasing.phases = phases
 
@@ -721,6 +735,62 @@ function Phasing.IsSpawnVisible(phase)
 
     if phase == phases.GRIMCLAW_INN then
         return complete[13599] or false
+    end
+
+    if phase == phases.BARGE_AT_PEACE then
+        return (((not complete[25515]) and (not complete[25517]) and (not complete[25524])) or ((not complete[25516]) and (not complete[25518]) and (not complete[25526]))) or complete[25542] or complete[25543] or complete[25561] or complete[25562] or false
+    end
+
+    if phase == phases.BARGE_UNDER_ATTACK then
+        return (complete[25515] and complete[25517] and complete[25524] and (not complete[25542]) and (not complete[25561])) or (complete[25516] and complete[25518] and complete[25526] and (not complete[25543]) and (not complete[25562])) or false
+    end
+
+    if phase == phases.KELSEY_AT_COVE then
+        return not complete[26889]
+    end
+
+    if phase == phases.HORATIO_IRONCLAD_COVE then
+        return complete[27790] or (questLog[27790] and questLog[27790].isComplete == 1) or false
+    end
+
+    if phase == phases.DEADMINES_HOGGER_ALIVE then
+        return not questLog[27739]
+    end
+
+    if phase == phases.DEADMINES_HOGGER_DEAD then
+        return (questLog[27739] and questLog[27739].isComplete == 1) or false
+    end
+
+    if phase == phases.SILVERPINE_FOREST_HIGH_COMMAND then
+        return not complete[27098]
+    end
+
+    if phase == phases.SILVERPINE_FOREST_SEPULCHER then
+        return complete[27098] and (not complete[27438]) or false
+    end
+
+    if phase == phases.SILVERPINE_FOREST_FORSAKEN_FRONT then
+        return complete[27438] and (not complete[27472] and (not questLog[27472] or (questLog[27472] and questLog[27472].isComplete == 0))) or false
+    end
+
+    if phase == phases.SILVERPINE_FOREST_FORSAKEN_FRONT_2 then
+        return (complete[27472] or (questLog[27472] and questLog[27472].isComplete == 1)) and (not complete[27601] and (not questLog[27601] or (questLog[27601] and questLog[27601].isComplete == 0))) or false
+    end
+
+    if phase == phases.SILVERPINE_FOREST_BATTLEFRONT then
+        return complete[27601] or (questLog[27601] and questLog[27601].isComplete == 1) or false
+    end
+
+    if phase == phases.RUINS_OF_GILNEAS_FFC then
+        return not complete[27401]
+    end
+
+    if phase == phases.RUINS_OF_GILNEAS_EMBERSTONE then
+        return complete[27401] and (not complete[27406]) and (not complete[27423]) or false
+    end
+
+    if phase == phases.RUINS_OF_GILNEAS_TEMPESTS_REACH then
+        return complete[27406] and complete[27423] and (not complete[27438]) or false
     end
 
     return false

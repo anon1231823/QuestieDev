@@ -4,7 +4,7 @@
 [![Stars](https://img.shields.io/github/stars/Questie/Questie)](https://img.shields.io/github/stars/Questie/Questie)
 
 [![Downloads](https://img.shields.io/github/downloads/Questie/Questie/total.svg)](https://github.com/Questie/Questie/releases/)
-[![Downloads Latest](https://img.shields.io/github/downloads/Questie/Questie/v10.13.2/total.svg)](https://github.com/Questie/Questie/releases/latest)
+[![Downloads Latest](https://img.shields.io/github/downloads/Questie/Questie/v10.16.0/total.svg)](https://github.com/Questie/Questie/releases/latest)
 [![Date Latest](https://img.shields.io/github/release-date/Questie/Questie.svg)](https://github.com/Questie/Questie/releases/latest)
 [![Commits Since Latest](https://img.shields.io/github/commits-since/Questie/Questie/latest.svg)](https://github.com/Questie/Questie/commits/master)
 
@@ -20,18 +20,29 @@ If you have problems, please read the [Frequently Asked Questions](https://githu
 ## Information
 - [Frequently Asked Questions](https://github.com/Questie/Questie/wiki/FAQ)
 - Come chat with us on [our Discord server](https://discord.gg/s33MAYKeZd).
-- You can use the [issue tracker](https://github.com/Questie/Questie/issues) to report bugs and post feature requests (requires a Github account).
+- You can use the [issue tracker](https://github.com/Questie/Questie/issues) to report bugs and post feature requests (requires a GitHub account).
 - When creating an issue please follow the templated structure to speed up a possible fix.
 - If you get an error message from the WoW client, please include the **complete** text or a screenshot of it in your report.
     - You need to enter `/console scriptErrors 1` once in the ingame chat for Lua error messages to be shown. You can later disable them again with `/console scriptErrors 0`.
 
 Trust us it's (Good)!
 
+## Languages
+
+Questie comes with translations for all offical WoW Classic languages. These are:
+
+English, German, French, Spanish, Portuguese, Russian, Chinese, Taiwanese and Korean.
+
+If you want to help with translations then checkout the [Translation folder](https://github.com/Questie/Questie/tree/master/Localization/Translations) and search for missing translations by:
+> `["<yourLanguage>"] = false` (e.g. `["deDE"] = false`) and replace the `false` with a string of the new translation, e.g. `["<yourLanguage>"] = "YourTranslation"`.
+
+On top of that there is support for Ukrainian ([through another addon](https://www.curseforge.com/wow/addons/questie-translation-ukrainian)).
+Following [this guide](https://github.com/Questie/Questie/wiki/Localization-to-more-languages) you can add support for even more languages.
+
 ## Contribution
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-- We are happy about every help and contribution we get, so feel free to submit a Pull Request on Github
-- Translators can search for missing translations by: `["<yourLanguage>"] = false` (e.g. `["deDE"] = false`) and replace the `false` with a string of the new translation, e.g. `["<yourLanguage>"] = "YourTranslation"`. Current translations can be found in the [Translation folder](https://github.com/Questie/Questie/tree/master/Localization/Translations)
+- We are happy about every help and contribution we get, so feel free to submit a Pull Request on GitHub
 - Additional information you might find interesting can be found [here](https://github.com/Questie/Questie/wiki/Contributing)
 
 ### Installing lua
